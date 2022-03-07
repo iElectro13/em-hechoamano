@@ -8,7 +8,6 @@ const Footer = () => {
         <div className='flex flex-col items-center justify-center'>
             <span className='font-raleway'>Made with love by: <span className='font-bold'>iElectro</span></span>
             <span className='font-raleway'>&#169; Copyright. All rights reserved</span>
-
         </div>
     </footer>
   )

@@ -1,8 +1,9 @@
 import React from 'react'
+import { NavLink } from 'react-router-dom'
 
-const CategoryItem = ( { text } ) => {
+const CategoryItem = ( { text, route } ) => {
   return (
-    <span className='hover:text-leaf-400 cursor-pointer md:text-2xl'>{text}</span>
+    <NavLink className={({isActive}) => 'hover:text-leaf-400 cursor-pointer md:text-2xl' + (isActive ? ' text-leaf-400' : '')} to={route}>{text}</NavLink>
   )
 }
 

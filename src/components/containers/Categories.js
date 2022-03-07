@@ -4,10 +4,10 @@ import CategoryItem from '../buttons/CategoryItem'
 const Categories = () => {
   return (
     <div className='flex justify-center items-center gap-4 text-gray-900 font-raleway font-medium '>
-        <CategoryItem text="Todos"/>
-        <CategoryItem text="Gorros"/>
-        <CategoryItem text="Bufandas"/>
-        <CategoryItem text="Ponchos"/>
+        <CategoryItem text="Todos" route="/productos/todos"/>
+        <CategoryItem text="Gorros" route="/productos/gorros"/>
+        <CategoryItem text="Bufandas" route="/productos/bufandas"/>
+        <CategoryItem text="Ponchos" route="/productos/ponchos"/>
 
 
     </div>
