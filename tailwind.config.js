@@ -71,7 +71,7 @@ module.exports = {
         'lora': ['Lora', 'serif'],
         'raleway': ['Raleway', 'sans-serif'],
         'handlee': ['Handlee', 'cursive']
-      }
+      },
     },
   },
   plugins: [],

@@ -1,3 +1,37 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+#headerOpen {
+    animation-name: mymove;
+    animation-duration: 0.6s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+}
+
+#headerClose {
+    animation-name: mymoveReverse;
+    animation-duration: 0.6s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+}
+
+@keyframes mymove {
+    from {
+        height: 84px;
+    }
+    to {
+        height: 224px;
+    }
+}
+
+@keyframes mymoveReverse {
+    from {
+        height: 224px;
+    }
+    to {
+        height: 84px;
+    }
+}
