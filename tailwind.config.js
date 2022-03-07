@@ -72,6 +72,7 @@ module.exports = {
         'raleway': ['Raleway', 'sans-serif'],
         'handlee': ['Handlee', 'cursive']
       },
+      visibility: ["group-hover"]
     },
   },
   plugins: [],

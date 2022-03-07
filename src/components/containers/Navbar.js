@@ -34,9 +34,9 @@ const Navbar = () => {
                         md:mr-0
                         md:mt-0"
                 >
-                    <NavItem text="Inicio" />
-                    <NavItem text="Productos" />
-                    <NavItem text="Carrito" />
+                    <NavItem text="Inicio" route="/"/>
+                    <NavItem text="Productos" route="/productos" />
+                    <NavItem text="Carrito" route="/carrito"/>
                 </div>
             </nav>
         </header>

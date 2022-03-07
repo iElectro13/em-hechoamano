@@ -1,8 +1,11 @@
 import React from 'react'
+import { NavLink } from 'react-router-dom'
 
-const NavItem = ({ text }) => {
+const NavItem = ({ text, route }) => {
   return (
-    <span className='text-gray-900 hover:text-leaf-400 cursor-pointer font-bold text-xl'>{text}</span>
+    <NavLink className='text-gray-900 hover:text-leaf-400 cursor-pointer font-bold text-xl' to={route} activeClassName="active">
+      {text}
+    </NavLink>
   )
 }
 
