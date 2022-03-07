@@ -10,14 +10,14 @@
     animation-fill-mode: forwards;
 }
 
-#headerClose {
+/* #headerClose {
     animation-name: mymoveReverse;
     animation-duration: 0.6s;
     animation-iteration-count: 1;
     animation-timing-function: ease-out;
     animation-fill-mode: forwards;
 }
-
+ */
 @keyframes mymove {
     from {
         height: 84px;

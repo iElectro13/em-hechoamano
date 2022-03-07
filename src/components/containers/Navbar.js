@@ -2,10 +2,16 @@ import React, { useEffect, useState } from "react";
 import Logo from "../buttons/Logo";
 import { IoMenu } from "react-icons/io5";
 import NavItem from "../buttons/NavItem";
+import { useLocation } from "react-router-dom";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false)
+  const location = useLocation()
+
   useEffect(()=>{
+
+    setIsOpen(false)
+
     window.addEventListener("scroll", ()=>{
       setIsOpen(false)
     })
@@ -14,7 +20,7 @@ const Navbar = () => {
         setIsOpen(false)
       }
     })
-  }, [])
+  }, [location])
 
     return (
         <header id={isOpen ? "headerOpen" : "headerClose"} className="w-full py-1 flex justify-center items-start relative md:items-center md:justify-between md:px-12 z-0 transition-transform">
