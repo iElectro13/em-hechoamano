@@ -17,7 +17,7 @@ const Product = () => {
     })
 
     return (
-        <div className='relative group w-full aspect-[12/16] text-gray-900 font-raleway shadow-xl rounded-lg overflow-hidden hover:scale-105 transition-all'>
+        <div className='relative group w-full min-h-max text-gray-900 font-raleway shadow-xl rounded-lg overflow-hidden hover:scale-105 transition-all'>
             <div className='flex-col justify-center items-center gap-4 p-4 absolute z-20 bg-gray-900/80 w-full h-full hidden group-hover:flex transition-all'>
                 <GhostButton text="Agregar a carrito">
                     <FaShoppingCart className='text-2xl'/>
