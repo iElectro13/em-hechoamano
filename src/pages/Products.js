@@ -1,4 +1,3 @@
-import React, { useEffect } from 'react'
 import Categories from '../components/containers/Categories'
 import ProductCards from '../components/containers/ProductCards'
 import Section from '../components/containers/Section'

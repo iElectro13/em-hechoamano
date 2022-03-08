@@ -7,7 +7,7 @@ import Image3 from "../../assets/3.jpeg";
 
 const SquareSlider = () => {
     return (
-        <div className='max-w-lg lg:row-span-2 lg:col-start-2 lg:row-start-1'>
+        <div className='max-w-lg aspect-square lg:row-span-2 lg:col-start-2 lg:row-start-1'>
             <Carousel
                 autoPlay={true}
                 showStatus={false}

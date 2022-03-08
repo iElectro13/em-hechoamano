@@ -3,6 +3,7 @@ import Navbar from "./components/containers/Navbar";
 import Landing from "./pages/Landing";
 import Products from "./pages/Products";
 import { Routes, Route } from "react-router-dom";
+import Cart from "./pages/Cart";
 
 function App() {
     return (
@@ -13,6 +14,8 @@ function App() {
                 <Route path="/productos" element={<Products />}>
                     <Route path="/productos/:category" element={<Products />} />
                 </Route>
+                <Route path="/carrito" element={<Cart />} />
+
             </Routes>
             <Footer />
         </div>
