@@ -1,4 +1,6 @@
 import React from "react";
+import {BsTrash} from "react-icons/bs"
+import { TiPencil } from "react-icons/ti"
 
 const CartItem = () => {
     return (
@@ -12,7 +14,13 @@ const CartItem = () => {
             </div>
 
             <div className="flex flex-col justify-between items-start w-full p-2 gap-1 col-span-7 sm:col-span-8 md:col-span-9 lg:col-span-10">
+                <div className="w-full flex justify-between items-center">
                 <h3 className="font-bold text-2xl sm:text-3xl md:text-4xl">Gorro de lana</h3>
+                <div className="flex justify-center items-center text-4xl">
+                    <BsTrash className="text-cerise-600 text-3xl"/>
+                    <TiPencil className="text-leaf-500"/>
+                </div>
+                </div>
 
                 <p className="text-sm font-light text-left sm:text-base md:text-lg lg:text-xl">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit.
