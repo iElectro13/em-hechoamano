@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import { AiFillMinusSquare, AiFillPlusSquare } from "react-icons/ai";
 import PrimaryButton from "../buttons/PrimaryButton";
 
 const DetailForm = () => {
+    const [quantity, setQuantity] = useState(1)
     return (
         <form
             action=""
@@ -20,13 +21,16 @@ const DetailForm = () => {
                     <option value="l">L</option>
                 </select>
                 <div className="flex justify-center items-center">
-                    <AiFillMinusSquare className="text-5xl text-orange-400 cursor-pointer" />
+                    {
+
+                        quantity <= 1 ? <AiFillMinusSquare className="text-5xl text-gray-300" /> : <AiFillMinusSquare onClick={()=> setQuantity(quantity - 1)} className="text-5xl text-orange-400 cursor-pointer" />
+                    }
 
                     <span className="text-2xl text-gray-900 font-bold h-full bg-orange-300 px-3 py-1 rounded">
-                        1
+                        {quantity}
                     </span>
 
-                    <AiFillPlusSquare className="text-5xl text-orange-400 cursor-pointer" />
+                    <AiFillPlusSquare onClick={()=> setQuantity(quantity + 1)} className="text-5xl text-orange-400 cursor-pointer" />
                 </div>
                 <div className="flex flex-wrap gap-1 justify-center items-center ">
                     <span className="font-bold text-gray-900 text-xl">

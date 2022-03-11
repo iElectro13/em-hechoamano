@@ -4,8 +4,6 @@ import Landing from "./pages/Landing";
 import Products from "./pages/Products";
 import { Routes, Route } from "react-router-dom";
 import Cart from "./pages/Cart";
-import ProductDetailCard from "./components/cards/ProductDetailCard";
-import ResumeModal from "./components/cards/ResumeModal";
 
 function App() {
     return (
@@ -20,7 +18,6 @@ function App() {
 
             </Routes>
             <Footer />
-            <ResumeModal />
 
         </div>
     );

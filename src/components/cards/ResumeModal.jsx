@@ -2,9 +2,9 @@ import React from "react";
 import PrimaryButton from "../buttons/PrimaryButton";
 import Modal from "../containers/Modal";
 
-const ResumeModal = () => {
+const ResumeModal = ( { onOpen, onClose } ) => {
     return (
-        <Modal>
+        <Modal onClose={onClose}>
             <h3 className="font-lora font-bold text-4xl text-gray-900">
                 Resúmen
             </h3>

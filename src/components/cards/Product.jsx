@@ -4,7 +4,7 @@ import { FaShoppingCart } from "react-icons/fa"
 import { useLocation, useNavigate } from 'react-router-dom'
 
 
-const Product = () => {
+const Product = ( {onOpen} ) => {
 
     const navigate = useNavigate()
     const location = useLocation()
@@ -22,7 +22,7 @@ const Product = () => {
                 <GhostButton text="Agregar a carrito">
                     <FaShoppingCart className='text-2xl' />
                 </GhostButton>
-                <GhostButton text="Ver detalles" />
+                <GhostButton onOpen={onOpen} text="Ver detalles" />
             </div>
             <div className='w-full aspect-[7/8] bg-red-500 overflow-hidden'>
                 <img className="object-cover h-full w-full" src={require('../../assets/1.jpeg')} alt="imagen" />

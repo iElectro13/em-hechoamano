@@ -2,10 +2,10 @@ import React from "react";
 import Modal from "../containers/Modal";
 import DetailForm from "../forms/DetailForm";
 
-const ProductDetailCard = () => {
+const ProductDetailCard = ( {onClose} ) => {
     return (
 
-        <Modal>
+        <Modal onClose={onClose}>
             <div className="w-full aspect[9/16] rounded-lg overflow-auto shadow-lg shadow-gray-900/20">
                 <img
                     className="w-full h-full object-cover rounded-lg"

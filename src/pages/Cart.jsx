@@ -1,9 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 import PrimaryButton from "../components/buttons/PrimaryButton";
+import ResumeModal from "../components/cards/ResumeModal";
 import CartItems from "../components/containers/CartItems";
 import Section from "../components/containers/Section";
 
 const Cart = () => {
+    const [isOpen, setIsOpen] =  useState(false)
+
     return (
         <Section title="Carrito">
             <CartItems />
@@ -11,7 +14,9 @@ const Cart = () => {
                 <span>Total:</span>
                 <span className="text-gray-600">100.000$</span>
             </div>
-            <PrimaryButton text="VER RESÚMEN" />
+            <PrimaryButton onOpen={setIsOpen} text="VER RESÚMEN" />
+            {isOpen && <ResumeModal onClose={setIsOpen} />}
+
         </Section>
     );
 };
