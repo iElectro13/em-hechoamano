@@ -15,7 +15,6 @@ function App() {
                     <Route path="/productos/:category" element={<Products />} />
                 </Route>
                 <Route path="/carrito" element={<Cart />} />
-
             </Routes>
             <Footer />
 
