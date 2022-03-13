@@ -18,7 +18,7 @@ const ProductDetailCard = () => {
                 {selectedProduct.name}
             </h3>
             <p className="text-sm font-light text-left sm:text-base md:text-lg lg:text-xl text-gray-500">{selectedProduct.description}</p>
-            <DetailForm />
+            <DetailForm prod={selectedProduct}/>
         </Modal>
 
     );

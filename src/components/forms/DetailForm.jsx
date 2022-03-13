@@ -1,18 +1,31 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { AiFillMinusSquare, AiFillPlusSquare } from "react-icons/ai";
 import { CartState } from "../../context/Context";
 
-const DetailForm = () => {
+const DetailForm = ( {prod} ) => {
     const [quantity, setQuantity] = useState(1)
-    const { state: { selectedProduct }, dispatch } = CartState()
+    const { state: { selectedProduct, cart }, dispatch } = CartState()
 
-    const handleSubmit = (e)=>{
+    const handleSubmit = (e) => {
         e.preventDefault()
         dispatch({
             type: "ADD_TO_CART",
-            payload: {...selectedProduct, quantity}
+            payload: { ...selectedProduct, quantity }
         })
     }
+
+    const handleClick = () =>{
+        dispatch({
+            type: "EDIT_CART_ITEM",
+            payload: {...prod, quantity: quantity}
+        })
+    }
+
+    useEffect(() => {
+        if(cart.some(item => item.id === prod.id)){
+            setQuantity(cart.filter(i => i.id === prod.id)[0].quantity)
+        }
+    }, [cart, prod])
 
     return (
         <form
@@ -47,13 +60,21 @@ const DetailForm = () => {
                         Subtotal:
                     </span>
                     <span className="font-bold text-gray-400 text-xl">
-                        {selectedProduct.price}$
+                        {prod.price}$
                     </span>
                 </div>
             </div>
-            <button type="submit" className='text-gray-100 bg-fa-600 font-bold hover:bg-fa-500 font-raleway w-full py-2 rounded md:col-span-2 active:scale-95'>
-                AGREGAR AL CARRITO
-            </button>
+            {
+                cart.some(product => product.id === prod.id) ? (
+                <button onClick={handleClick} type="button" className='text-gray-100 bg-fa-600 font-bold hover:bg-fa-500 font-raleway w-full py-2 rounded md:col-span-2 active:scale-95'>
+                    EDITAR COMPRA
+                </button>) : (
+                    <button type="submit" className='text-gray-100 bg-fa-600 font-bold hover:bg-fa-500 font-raleway w-full py-2 rounded md:col-span-2 active:scale-95'>
+                        AGREGAR AL CARRITO
+                    </button>
+                )
+            }
+
         </form>
     );
 };

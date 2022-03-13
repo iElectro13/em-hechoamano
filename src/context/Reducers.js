@@ -9,6 +9,9 @@ export const cartReducer = (state, action) => {
         case "REMOVE_FROM_CART":
             return { ...state, cart: state.cart.filter(item => item.id !== action.payload.id) }
 
+        case "EDIT_CART_ITEM":
+            return { ...state, cart: state.cart.filter(item => item.id === action.payload.id ? item.quantity =  action.payload.quantity : item.quantity), selectedProduct: {}}
+
         case "WATCH_DETAIL":
             return { ...state, selectedProduct: action.payload }
 

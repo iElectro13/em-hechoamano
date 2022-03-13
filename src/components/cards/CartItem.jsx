@@ -13,6 +13,13 @@ const CartItem = ({prod}) => {
             payload: prod
         })
     }
+
+    const onEdit = () =>{
+        dispatch({
+            type: "WATCH_DETAIL",
+            payload: prod
+        })
+    }
     return (
         <div className="overflow-hidden bg-orange-50 w-full grid grid-cols-12 rounded-lg shadow-xl shadow-gray-900/10">
             <div className="col-span-5 sm:col-span-4 md:col-span-3 lg:col-span-2">
@@ -28,7 +35,7 @@ const CartItem = ({prod}) => {
                 <h3 className="font-bold text-2xl sm:text-3xl md:text-4xl">{prod.name}</h3>
                 <div className="flex justify-center items-center text-4xl">
                     <BsTrash onClick={onDelete} className="text-cerise-600 text-3xl cursor-pointer"/>
-                    <TiPencil className="text-leaf-500"/>
+                    <TiPencil onClick={onEdit} className="text-leaf-500 cursor-pointer"/>
                 </div>
                 </div>
 
