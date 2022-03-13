@@ -22,10 +22,17 @@ const Product = ({ product }) => {
         })
     }
 
+    const onAdd = (prod) =>{
+        dispatch({
+            type: "ADD_TO_CART",
+            payload: {...prod, quantity: 1}
+        })
+    }
+
     return (
         <div className='relative group w-full min-h-max text-gray-900 font-raleway shadow-xl shadow-gray-900/30 rounded-lg overflow-hidden hover:scale-105 transition-all'>
             <div className='flex-col justify-center items-center gap-4 p-4 absolute z-20 bg-gray-900/80 w-full h-full hidden group-hover:flex transition-all'>
-                <button className='bg-none border-2 border-orange-100 text-orange-100 p-1 w-full rounded-md hover:bg-gray-800 font-bold text-raleway flex justify-center items-center gap-4 active:scale-95'>
+                <button onClick={()=> onAdd(product)} className='bg-none border-2 border-orange-100 text-orange-100 p-1 w-full rounded-md hover:bg-gray-800 font-bold text-raleway flex justify-center items-center gap-4 active:scale-95'>
                     Enviar a carrito
                     <FaShoppingCart className='text-2xl' />
                 </button>
