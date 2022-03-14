@@ -1,70 +1,77 @@
-# Getting Started with Create React App
+# E&M Hecho a mano
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+E&M: Hecho a mano is an e-commerce made with create-react-app
 
-## Available Scripts
+![img1](/assets/images/cap1.png)
+![img2](/assets/images/cap2.png)
+![img3](/assets/images/cap3.png)
 
-In the project directory, you can run:
 
-### `npm start`
+## Installation
+```bash
+git clone https://github.com/iElectro13/em-hechoamano
+```
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+```bash
+cd em-hechoamano
+```
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+```
+npm install
+```
 
-### `npm test`
+## Usage
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```bash
+npm start
+```
 
-### `npm run build`
+## Third-party's libraries
+- [react-alice-carousel](https://github.com/maxmarinich/react-alice-carousel#readme "react-alice-carousel")
+- [react-router-dom](https://github.com/remix-run/react-router#readme "react-router-dom")
+- [react-icons](https://react-icons.github.io/react-icons/ "react-icons")
+- [tailwindcss](https://tailwindcss.com/ "tailwindcss")
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Roadmap
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+1) Backend
+2) Auth with JWT
+3) Admin panel
+4) User registration
+5) Stripe payment
+6) Jest and RTL implementation
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Global state management
+In this project was used ContextAPI and useReducer working together to handle the global state.
 
-### `npm run eject`
+## Directories
+- assets/ : In this folder i’m going to place static files, like images, fonts, vídeos and
+many others utility files.
+- components/ : every component will be placed in this folder. Inside this folder i am
+going to organize another folders by component category, like buttons, cards, etc.
+- buttons/, cards/... : inside this kind of folders will be placed single React Components
+beside it’s Test file.
+- pages: In this folder all “pages” will be placed. In this project, “pages” means
+complete sections, in order to route them later, so the user can navigate as any web
+page.
+- context/: In this folder i'm going to store the Context and Reducers files.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Config files
+- index.css : In this file i’m going to place any global css rule.
+- App.js: In this file I'm going to route my application.
+- Index.js: Config file.
+- tailwind.config.js and postcss.config.js : these are CSS framework config files.
+- Context.js: Global state config
+- Reducers.js: Actions to mutate the global state
+- generate.js: simple script to mock the database
+- db.json: json-server mock data file
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Class components vs Functional components
+In this project, functional components will be used. It’s completely prohibited to use class
+components.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Contributing
+Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Authors
+[iElectro](https://github.com/iElectro13 "iElectro")
