@@ -2,9 +2,9 @@
 
 E&M: Hecho a mano is an e-commerce made with create-react-app
 
-![img1](/assets/images/cap1.png)
-![img2](/assets/images/cap2.png)
-![img3](/assets/images/cap3.png)
+![img1](./src/assets/images/cap1.png)
+![img2](./src/assets/images/cap2.png)
+![img3](./src/assets/images/cap3.png)
 
 
 ## Installation
