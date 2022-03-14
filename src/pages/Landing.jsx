@@ -1,7 +1,6 @@
 import React from 'react'
 import AliceCarousel from 'react-alice-carousel'
 import { Link } from 'react-router-dom'
-import PrimaryButton from '../components/buttons/PrimaryButton'
 import { CartState } from '../context/Context'
 
 const Landing = () => {
@@ -13,7 +12,7 @@ const Landing = () => {
     })
   }
   return (
-    <div className='grid grid-cols-1 justify-items-center place-items-center bg-orange-100 min-h-screen relative z-1 p-6 w-full gap-5 rounded-xl shadow-[0_-20px_30px_-15px_rgba(0,0,0,0.5)] md:grid-cols-2'>
+    <div className='grid grid-cols-1 justify-items-center place-items-center bg-orange-100 min-h-screen relative z-1 p-6 w-full gap-5 rounded-tl-xl rounded-tr-xl shadow-[0_-20px_30px_-15px_rgba(0,0,0,0.5)] md:grid-cols-2'>
       <h2 className='text-gray-900 font-lora text-5xl font-bold text-center md:text-7xl md:col-span-2 lg:col-start-1 lg:col-end-2 lg:col-span-1'>Un hilo que llega al corazón</h2>
 
 
