@@ -10,13 +10,19 @@ export const cartReducer = (state, action) => {
             return { ...state, cart: state.cart.filter(item => item.id !== action.payload.id) }
 
         case "EDIT_CART_ITEM":
-            return { ...state, cart: state.cart.filter(item => item.id === action.payload.id ? item.quantity =  action.payload.quantity : item.quantity), selectedProduct: {}}
+            return { ...state, cart: state.cart.filter(item => item.id === action.payload.id ? item.quantity = action.payload.quantity : item.quantity), selectedProduct: {} }
 
         case "WATCH_DETAIL":
             return { ...state, selectedProduct: action.payload }
 
         case "RESET_WATCH_DETAIL":
             return { ...state, selectedProduct: {} }
+
+        case "WATCH_RESUME":
+            return { ...state, resumeActive: true }
+
+        case "CLOSE_RESUME":
+            return { ...state, resumeActive: false }
 
         default:
             return state

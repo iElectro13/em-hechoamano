@@ -7,6 +7,9 @@ const Modal = ({ children }) => {
         dispatch({
             type: "RESET_WATCH_DETAIL",
         })
+        dispatch({
+            type: "CLOSE_RESUME"
+        })
     }
     return (
         <div className="w-full h-screen fixed top-0 z-20">

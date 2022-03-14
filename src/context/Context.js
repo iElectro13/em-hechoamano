@@ -7,7 +7,8 @@ const Context = ({ children }) => {
     const [state, dispatch] = useReducer(cartReducer, {
         products: [],
         cart: [],
-        selectedProduct: {}
+        selectedProduct: {},
+        resumeActive: false
     })
 
     return (

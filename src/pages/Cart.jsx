@@ -1,13 +1,16 @@
-import React, { useState } from "react";
-import PrimaryButton from "../components/buttons/PrimaryButton";
 import ResumeModal from "../components/cards/ResumeModal";
 import CartItems from "../components/containers/CartItems";
 import Section from "../components/containers/Section";
 import { CartState } from "../context/Context";
 
 const Cart = () => {
-    const [isOpen, setIsOpen] =  useState(false)
-    const { state: {cart} } = CartState()
+    const { state: {cart, resumeActive}, dispatch } = CartState()
+
+    const onResume = ()=>{
+        dispatch({
+            type: "WATCH_RESUME"
+        })
+    }
     return (
         <Section title="Carrito">
             <CartItems />
@@ -15,8 +18,8 @@ const Cart = () => {
                 <span>Total:</span>
                 <span className="text-gray-600">{cart.reduce((acc, curr) => acc + curr.price * curr.quantity, 0)}$</span>
             </div>
-            <PrimaryButton onOpen={setIsOpen} text="VER RESÚMEN" />
-            {isOpen && <ResumeModal onClose={setIsOpen} />}
+            <button className='text-gray-100 bg-fa-600 font-bold hover:bg-fa-500 font-raleway w-full py-2 rounded md:col-span-2 active:scale-95' onClick={onResume}>VER RESÚMEN</button>
+            {resumeActive && <ResumeModal />}
 
         </Section>
     );
