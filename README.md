@@ -44,6 +44,14 @@ npm start
 ## Global state management
 In this project was used ContextAPI and useReducer working together to handle the global state.
 
+## Main features
+
+- Add to cart
+- Remove from cart
+- Edit from cart
+- Send cart from whatsapp
+- Watch product detail
+
 ## Directories
 - assets/ : In this folder i’m going to place static files, like images, fonts, vídeos and
 many others utility files.
