@@ -22,7 +22,7 @@ const Landing = () => {
       <div className='w-full max-w-lg aspect-square lg:row-span-2 lg:col-start-2 lg:row-start-1'>
 
       <AliceCarousel mouseTracking animationType="fadeout" disableDotsControls="true" infinite="true" keyboardNavigation="true" autoWidth="true" items={products.map(product => (
-        <div onClick={()=> onSelect(product)} className='w-full aspect-square bg-red-500 overflow-hidden'>
+        <div onClick={()=> onSelect(product)} className='w-full aspect-square bg-orange-100 overflow-hidden'>
         <img src={product.image} alt={product.name} className="object-cover h-full w-full"/>
         </div>
       ))} />
