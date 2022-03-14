@@ -1,9 +1,14 @@
 import { CartState } from "../../context/Context";
 import Modal from "../containers/Modal";
 
+/**Renders the Resume modal window and handles the "send to whatsapp" feature*/
+
 const ResumeModal = () => {
     const { state: { cart } } = CartState()
 
+    /**Loops the cart and transform every cart item to string, then saves the string in the text variable
+     * At the end of the loop, sum the baseUrl, the text and opens a new window that redirects to the whatsapp api
+     */
     const sendToWhatsapp = () =>{
         let baseUrl = "https://api.whatsapp.com/send?phone=573175908347&text="
         let text = "¡Hola! me gustaría pedir:%0A%0A"

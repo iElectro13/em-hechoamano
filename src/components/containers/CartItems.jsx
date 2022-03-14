@@ -2,7 +2,7 @@ import React from 'react'
 import CartItem from '../cards/CartItem'
 import { CartState } from "../../context/Context";
 
-
+/** This component renders the cart items inside itself */
 
 const CartItems = () => {
   const {state: {cart}} = CartState()

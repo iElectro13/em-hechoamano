@@ -4,6 +4,8 @@ import { IoMenu } from "react-icons/io5";
 import NavItem from "../buttons/NavItem";
 import { useLocation } from "react-router-dom";
 
+/**Renders the navbar menu and handles the open or close state of itself */
+
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
     const location = useLocation();
@@ -14,15 +16,17 @@ const Navbar = () => {
 
     useEffect(() => {
         setIsOpen(false);
-
+        /**Clean eventListeners before adding new ones */
         window.removeEventListener("scroll", onClose);
         window.removeEventListener("resize", onClose);
-
+        /**If window is resized or scrolled, close the navbar */
         window.addEventListener("scroll", onClose);
         window.addEventListener("resize", onClose);
     }, [location]);
 
     return (
+
+        /** If isOpen, adds an id to handle the animation by css (index.css contains the animation) */
         <header
             id={isOpen ? "headerOpen" : "headerClose"}
             className="w-full py-1 flex justify-center items-start relative md:items-center md:justify-between md:px-12 z-0 transition-transform"

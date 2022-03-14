@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { AiFillMinusSquare, AiFillPlusSquare } from "react-icons/ai";
 import { CartState } from "../../context/Context";
 
+/** This components allows to handle the data in order to send it to the cart correctly */
 const DetailForm = ( {prod} ) => {
     const [quantity, setQuantity] = useState(1)
     const { state: { selectedProduct, cart }, dispatch } = CartState()
@@ -22,6 +23,8 @@ const DetailForm = ( {prod} ) => {
     }
 
     useEffect(() => {
+        /** This functions sets the initial quantity of the selected item. If the item exists in the cart,
+         * sets the quantity state to the current quantity item value*/
         if(cart.some(item => item.id === prod.id)){
             setQuantity(cart.filter(i => i.id === prod.id)[0].quantity)
         }
@@ -44,6 +47,7 @@ const DetailForm = ( {prod} ) => {
                     <option value="l">L</option>
                 </select> */}
                 <div className="flex justify-center items-center">
+                    {/* This conditional allows to deactivate "minus" button if quantity <= 1 */}
                     {
 
                         quantity <= 1 ? <AiFillMinusSquare className="text-5xl text-gray-300" /> : <AiFillMinusSquare onClick={() => setQuantity(quantity - 1)} className="text-5xl text-orange-400 cursor-pointer" />
@@ -59,11 +63,14 @@ const DetailForm = ( {prod} ) => {
                     <span className="font-bold text-gray-900 text-xl">
                         Subtotal:
                     </span>
+                    {/* Subtotal value */}
                     <span className="font-bold text-gray-400 text-xl">
                         {prod.price * quantity}$
                     </span>
                 </div>
             </div>
+            {/* This conditionl allows to check if the item is already in the cart. In that case render the
+            "EDIT" button so the user can edit the item instead of adding again to the cart*/}
             {
                 cart.some(product => product.id === prod.id) ? (
                 <button onClick={handleClick} type="button" className='text-gray-100 bg-fa-600 font-bold hover:bg-fa-500 font-raleway w-full py-2 rounded md:col-span-2 active:scale-95'>

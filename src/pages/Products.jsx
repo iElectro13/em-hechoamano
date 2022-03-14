@@ -7,6 +7,7 @@ import Section from '../components/containers/Section'
 const Products = () => {
   const navigate = useNavigate()
   const location = useLocation()
+
   useEffect(()=>{
     if(location.pathname === "/productos"){
       navigate("/productos/todos")

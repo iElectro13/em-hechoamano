@@ -1,6 +1,10 @@
 import React from 'react'
 import { CartState } from '../../context/Context'
 
+/**This component renders modal windows and Receives "children" as a prop, so the developer can
+ * create modal windows by wrapping other components into this component.
+ */
+
 const Modal = ({ children }) => {
     const {dispatch} = CartState()
     const onClose = ()=>{

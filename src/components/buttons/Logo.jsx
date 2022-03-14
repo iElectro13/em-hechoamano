@@ -1,6 +1,7 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom'
 
+/**Renders the Page logo */
 const Logo = () => {
     const navigate = useNavigate()
     return (

@@ -3,6 +3,8 @@ import CartItems from "../components/containers/CartItems";
 import Section from "../components/containers/Section";
 import { CartState } from "../context/Context";
 
+
+/** This components render the total amount of cart items */
 const Cart = () => {
     const { state: {cart, resumeActive}, dispatch } = CartState()
 

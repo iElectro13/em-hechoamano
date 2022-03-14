@@ -3,6 +3,10 @@ import AliceCarousel from 'react-alice-carousel'
 import { Link } from 'react-router-dom'
 import { CartState } from '../context/Context'
 
+/**
+ * Render the landing section
+ */
+
 const Landing = () => {
   const { state: { products }, dispatch } = CartState()
   const onSelect = (prod)=>{
@@ -21,6 +25,7 @@ const Landing = () => {
       </p>
       <div className='w-full max-w-lg aspect-square lg:row-span-2 lg:col-start-2 lg:row-start-1'>
 
+      {/**Landing Carousel: Receives as a prop (items) an array of jsx components  */}
       <AliceCarousel mouseTracking animationType="fadeout" disableDotsControls="true" infinite="true" keyboardNavigation="true" autoWidth="true" items={products.map(product => (
         <div onClick={()=> onSelect(product)} className='w-full aspect-square bg-orange-100 overflow-hidden'>
         <img src={product.image} alt={product.name} className="object-cover h-full w-full"/>

@@ -1,5 +1,8 @@
 import React from 'react'
 
+
+/**This component wrap our section components, so we don't need to add styles every time we create a new
+ * section component.'*/
 const Section = ({ title, children }) => {
   return (
     <div className='relative z-10 flex flex-col justify-start items-center min-h-screen w-full bg-orange-100 py-4 px-4 sm:px-8 md:px-12 lg:px-20 rounded-tl-xl rounded-tr-xl shadow-[0_-20px_30px_-15px_rgba(0,0,0,0.5)] gap-4'>

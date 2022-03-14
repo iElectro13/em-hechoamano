@@ -3,6 +3,8 @@ import { CartState } from "../../context/Context";
 import Modal from "../containers/Modal";
 import DetailForm from "../forms/DetailForm";
 
+/**Renders the Product Detail modal window */
+
 const ProductDetailCard = () => {
     const { state: {selectedProduct}} = CartState()
     return (

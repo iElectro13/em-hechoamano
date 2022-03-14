@@ -1,8 +1,11 @@
 import { createContext, useContext, useReducer } from "react"
 import { cartReducer } from "./Reducers"
 
+
+
 const Cart = createContext()
 
+/** This components creates a global context and initializes the initial state */
 const Context = ({ children }) => {
     const [state, dispatch] = useReducer(cartReducer, {
         products: [{

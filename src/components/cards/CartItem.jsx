@@ -3,6 +3,8 @@ import { BsTrash } from "react-icons/bs"
 import { TiPencil } from "react-icons/ti"
 import { CartState } from "../../context/Context";
 
+/**Renders a single cart item */
+
 const CartItem = ({ prod }) => {
 
     const { dispatch } = CartState()

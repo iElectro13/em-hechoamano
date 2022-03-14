@@ -4,13 +4,14 @@ import { BsTrash } from "react-icons/bs"
 import { useLocation, useNavigate } from 'react-router-dom'
 import { CartState } from '../../context/Context'
 
-
+/**Renders a single product card */
 const Product = ({ product }) => {
     const { state: { cart }, dispatch } = CartState()
     const navigate = useNavigate()
     const location = useLocation()
 
     useEffect(() => {
+        /**If location is /products redirects to /todos in order to show all products at the first entry */
         if (location.pathname === '/productos') {
             navigate("/productos/todos")
         }
@@ -40,6 +41,7 @@ const Product = ({ product }) => {
     return (
         <div className='relative group w-full min-h-max text-gray-900 font-raleway shadow-xl shadow-gray-900/30 rounded-lg overflow-hidden hover:scale-105 transition-all'>
             <div className='flex-col justify-center items-center gap-4 p-4 absolute z-20 bg-gray-900/80 w-full h-full hidden group-hover:flex transition-all'>
+                {/* This conditional check if product exist in cart. In this case, renders the "remove from cart" button instead of the "add to cart" button */}
                 {
                     cart.some(p => p.id === product.id) ? (<button onClick={() => onDelete(product)}  className='bg-none border-2 border-orange-100 text-orange-100 p-1 w-full rounded-md hover:bg-gray-800 font-bold text-raleway flex justify-center items-center gap-4 active:scale-95'>
                     Quitar de Carrito
