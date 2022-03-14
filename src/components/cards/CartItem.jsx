@@ -1,20 +1,20 @@
 import React from "react";
-import {BsTrash} from "react-icons/bs"
+import { BsTrash } from "react-icons/bs"
 import { TiPencil } from "react-icons/ti"
 import { CartState } from "../../context/Context";
 
-const CartItem = ({prod}) => {
+const CartItem = ({ prod }) => {
 
     const { dispatch } = CartState()
 
-    const onDelete = ()=>{
+    const onDelete = () => {
         dispatch({
             type: "REMOVE_FROM_CART",
             payload: prod
         })
     }
 
-    const onEdit = () =>{
+    const onEdit = () => {
         dispatch({
             type: "WATCH_DETAIL",
             payload: prod
@@ -32,26 +32,28 @@ const CartItem = ({prod}) => {
 
             <div className="flex flex-col justify-between items-start w-full p-2 gap-1 col-span-7 sm:col-span-8 md:col-span-9 lg:col-span-10">
                 <div className="w-full flex justify-between items-center">
-                <h3 className="font-bold text-2xl sm:text-3xl md:text-4xl">{prod.name}</h3>
-                <div className="flex justify-center items-center text-4xl">
-                    <BsTrash onClick={onDelete} className="text-cerise-600 text-3xl cursor-pointer"/>
-                    <TiPencil onClick={onEdit} className="text-leaf-500 cursor-pointer"/>
-                </div>
+                    <h3 className="font-bold text-2xl sm:text-3xl md:text-4xl">{prod.name}</h3>
+                    <div className="flex justify-center items-center text-4xl">
+                        <BsTrash onClick={onDelete} className="text-cerise-600 text-3xl cursor-pointer" />
+                        <TiPencil onClick={onEdit} className="text-leaf-500 cursor-pointer" />
+                    </div>
                 </div>
 
                 <p className="text-sm font-light text-left sm:text-base md:text-lg lg:text-xl">
                     {prod.description}
                 </p>
                 <div className="flex flex-col justify-center items-center w-full font-bold sm:text-lg md:text-xl lg:text-2xl">
+
+                    <div className="flex justify-between items-center w-full">
+                        <span>Precio:</span>
+                        <span className="text-gray-600">{prod.price}</span>
+                    </div>
                     <div className="flex justify-between items-center w-full">
                         <span>Cantidad:</span>
                         <span className="text-gray-600">x{prod.quantity}</span>
                     </div>
 
-                    <div className="flex justify-between items-center w-full">
-                        <span>Talla:</span>
-                        <span className="text-gray-600">x1</span>
-                    </div>
+
 
                     <div className="flex justify-between items-center w-full">
                         <span>Subtotal:</span>

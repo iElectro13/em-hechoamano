@@ -53,13 +53,12 @@ const Product = ({ product }) => {
                     Ver Detalles
                 </button>
             </div>
-            <div className='w-full aspect-[7/8] bg-red-500 overflow-hidden'>
+            <div className='w-full aspect-[7/8] bg-orange-100 overflow-hidden'>
                 <img className="object-cover h-full w-full" src={product.image} alt="imagen" />
             </div>
             <div className='flex flex-col p-2 bg-none'>
 
                 <h3 className='font-bold text-xl'>{product.name}</h3>
-                <span className='text-sm text-gray-400'>{product.category}</span>
                 <span className='text-lg'>{product.price}$</span>
             </div>
         </div>

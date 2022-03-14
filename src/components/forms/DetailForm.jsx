@@ -34,7 +34,7 @@ const DetailForm = ( {prod} ) => {
             onSubmit={handleSubmit}
         >
             <div className="flex justify-between items-center w-full">
-                <select
+                {/* <select
                     className="py-2 w-32 font-bold font-gray-900 bg-orange-50 border-2 border-orange-400"
                     name="size"
                     id="size"
@@ -42,7 +42,7 @@ const DetailForm = ( {prod} ) => {
                     <option value="s">S</option>
                     <option value="m">M</option>
                     <option value="l">L</option>
-                </select>
+                </select> */}
                 <div className="flex justify-center items-center">
                     {
 
@@ -60,7 +60,7 @@ const DetailForm = ( {prod} ) => {
                         Subtotal:
                     </span>
                     <span className="font-bold text-gray-400 text-xl">
-                        {prod.price}$
+                        {prod.price * quantity}$
                     </span>
                 </div>
             </div>

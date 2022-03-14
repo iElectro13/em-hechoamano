@@ -1,7 +1,7 @@
 import React from 'react'
 import AliceCarousel from 'react-alice-carousel'
+import { Link } from 'react-router-dom'
 import PrimaryButton from '../components/buttons/PrimaryButton'
-import SquareSlider from '../components/sliders/SquareSlider'
 import { CartState } from '../context/Context'
 
 const Landing = () => {
@@ -18,7 +18,7 @@ const Landing = () => {
 
 
       <p className='text-gray-700 font-raleway text-center md:text-2xl md:text-left lg:col-start-1 lg:col-end-2'>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus minima a veritatis! Modi, tempora quam vel eaque voluptatem veritatis natus debitis, dignissimos, numquam quibusdam illum deserunt at omnis quos error.
+        Bienvenido a E&M: Hecho a mano, un emprendimiento familiar que pretende entregar una calidad única y diseños exclusivos. Cumplimos este objetivo asegurándonos de utilizar los mejores materiales y dedicando todo nuestro amor y cariño en cada creación. Definitivamente, somos un hilo que llega al corazón.
       </p>
       <div className='w-full max-w-lg aspect-square lg:row-span-2 lg:col-start-2 lg:row-start-1'>
 
@@ -28,7 +28,7 @@ const Landing = () => {
         </div>
       ))} />
       </div>
-      <PrimaryButton text="DESCUBRIR MÁS" />
+      <Link to="/productos" className='text-gray-100 bg-fa-600 font-bold hover:bg-fa-500 font-raleway w-full py-2 rounded md:col-span-2 active:scale-95 text-center'>DESCUBRIR MÁS</Link>
     </div>
   )
 }
